@@ -2,18 +2,7 @@
 
 Paid module. Content import from external platforms, plus full CMS export.
 
-## Module Boundary
-
-**core-import owns:** Import parsers, import/export router, import types.
-
-**Project owns:** Admin import page (`dashboard/settings/import/`).
-
-## Import Rules
-
-- Imports from `@/core/*` (slug, audit, types)
-- Framework conventions: `@/server/trpc`, `@/server/db/schema`
-- No dependency injection needed — parsers are pure functions
-- Project imports from `@/core-import/*`
+**Project owns:** Admin import page (`dashboard/settings/import/`). No DI — parsers are pure functions.
 
 ## Wiring Into a Project
 
